@@ -1,0 +1,13 @@
+<h3>main.component.html</h3>
+<p [style.font-size]="sizeChosenFromFSComponent">Orange 🍊</p>
+<p>Font size from component: {{ fontSizeFromFSComponent }}em</p>
+
+<div *ngIf="fontSizeFromFSComponent < 3">Less than 3em</div>
+<div *ngIf="fontSizeFromFSComponent == 3">Equals 3em</div>
+<div *ngIf="fontSizeFromFSComponent > 3">More than 3em</div>
+<hr />
+
+<app-font-size
+  [loveMessage]="titlez"
+  (changeMainFont)="sizeChanged($event)"
+></app-font-size>

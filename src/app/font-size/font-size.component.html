@@ -1,0 +1,18 @@
+<h3>font-size.component.html</h3>
+
+<p [style.font-size]="currentFontSize">Apple 🍎</p>
+
+<span>1</span>
+<input
+  type="range"
+  min="1"
+  max="5"
+  value="3"
+  (change)="fontSizeChanged($event)"
+/>
+<span>5</span>
+
+<p>Current font size: {{ currentFontSize }}</p>
+
+<h5>{{ loveMessage }}</h5>
+<hr />
